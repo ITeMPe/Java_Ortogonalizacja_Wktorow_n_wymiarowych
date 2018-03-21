@@ -151,6 +151,10 @@ public class Ortogonalizacja_Wektorow
 		}
 	}
 	
+	static void sprOrtogonalnosc()
+	{
+		
+	}
 	
 	
 	
