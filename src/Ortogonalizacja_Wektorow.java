@@ -105,8 +105,9 @@ public class Ortogonalizacja_Wektorow
 		 }System.out.println();
 	 }
 	 
-	 
+	 	sprOrtogonalnosc();
 	}
+
 	
 	
 	
@@ -123,7 +124,7 @@ public class Ortogonalizacja_Wektorow
 	
 	static void obliczanieIloczynuSkalarnego(int numberOfVec)
 	{
-		int temp = 0;
+		float temp = 0;
 		
 		for(int i=0; i<numberOfVec; i++)
 		{
@@ -153,7 +154,18 @@ public class Ortogonalizacja_Wektorow
 	
 	static void sprOrtogonalnosc()
 	{
-		
+		System.out.println("Sprawdzenie ortogonalnosci");
+		float sum=0;
+		for(int i=0; i<dimensions-1; i++)
+		{
+			for(int j=0; j<dimensions; j++)
+			{
+				sum += ortogonalVectors[i][j] * ortogonalVectors[i+1][j];
+			}
+			System.out.print("Iloczyn skalarny wektorów "); System.out.print(i);System.out.print(" i ");System.out.print(i+1);System.out.print(" =");;System.out.println(sum);
+			sum=0;
+		}
+		//System.out.print("suma= ");System.out.println(sum);
 	}
 	
 	
